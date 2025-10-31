@@ -22,7 +22,7 @@ The OrangeMonkey Userscript is loaded when opening the tab and checks if you can
 ## Instructions [quick]
 
 1. Install [OrangeMonkey](https://chromewebstore.google.com/detail/orangemonkey/ekmeppjgajofkpiofbebgcbohbmfldaf?hl=en)
-2. Create a Custom Script like shown in the picture, where you copy paste the `dist\userscript-autominer-loader.js` file. Make it load on document-end by clicking the blue Meta button in the script editor.
+2. Create a Custom Script like shown in the picture, where you copy paste the `dist\userscript-autominer-loader.js` ([https://github.com/ggcaponetto/midnight-autominer/blob/main/dist/userscript-autominer-loader.js](https://github.com/ggcaponetto/midnight-autominer/blob/main/dist/userscript-autominer-loader.js)) file. Make it load on document-end by clicking the blue Meta button in the script editor.
 
 ![OrangeMonkey Userscript](images/mgdsm-om-userscript.png)
 
