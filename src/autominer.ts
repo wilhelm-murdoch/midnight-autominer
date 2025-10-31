@@ -1,6 +1,6 @@
-const VERSION = "1.0.6";
+import { version } from "../package.json";
 
-console.log(`🛠️ Midnight Scavenger AutoMiner Script v${VERSION} initialized.`);
+console.log(`🛠️ Midnight Scavenger AutoMiner Script v${version} initialized.`);
 
 async function pause(milliseconds: number) {
   await new Promise((resolve) => setTimeout(resolve, milliseconds));
