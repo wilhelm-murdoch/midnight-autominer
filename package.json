@@ -1,5 +1,5 @@
 {
-  "name": "midnight-sm-autominer",
+  "name": "midnight-autominer",
   "version": "1.0.0",
   "main": "dist/autominer.js",
   "types": "dist/autominer.d.ts",
@@ -15,7 +15,7 @@
     "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Giuseppe Giulio Caponetto",
+  "license": "MIT",
   "description": ""
 }
