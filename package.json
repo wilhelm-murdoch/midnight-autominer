@@ -1,0 +1,22 @@
+{
+  "name": "midnight-sm-autoresume",
+  "version": "1.0.0",
+  "main": "dist/autoresume.js",
+  "types": "dist/autoresume.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "start": "node dist/autoresume.js",
+    "serve": "npx http-server ./dist -p 3000 --cors",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.24",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.2.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
