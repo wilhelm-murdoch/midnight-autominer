@@ -1,12 +1,11 @@
 {
-  "name": "midnight-sm-autoresume",
+  "name": "midnight-sm-autominer",
   "version": "1.0.0",
-  "main": "dist/autoresume.js",
-  "types": "dist/autoresume.d.ts",
+  "main": "dist/autominer.js",
+  "types": "dist/autominer.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch --preserveWatchOutput",
-    "start": "node dist/autoresume.js",
     "serve": "npx http-server ./dist -p 3000 --cors",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
