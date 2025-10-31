@@ -1,7 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const package_json_1 = require("../package.json");
-console.log(`🛠️ Midnight Scavenger AutoMiner Script v${package_json_1.version} initialized.`);
+const version = "1.0.0";
+console.log(`🛠️ Midnight Scavenger AutoMiner Script v${version} initialized.`);
 async function pause(milliseconds) {
     await new Promise((resolve) => setTimeout(resolve, milliseconds));
 }

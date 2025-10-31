@@ -1,5 +1,4 @@
-import { version } from "../package.json";
-
+const version = "1.0.0";
 console.log(`🛠️ Midnight Scavenger AutoMiner Script v${version} initialized.`);
 
 async function pause(milliseconds: number) {
