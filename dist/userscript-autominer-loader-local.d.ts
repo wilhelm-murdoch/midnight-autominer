@@ -1,0 +1,1 @@
+//# sourceMappingURL=userscript-autominer-loader-local.d.ts.map
