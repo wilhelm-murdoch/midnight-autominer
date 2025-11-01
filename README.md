@@ -26,6 +26,8 @@ The OrangeMonkey Userscript is loaded when opening the tab and checks if you can
 
 ![OrangeMonkey Userscript](images/mgdsm-om-userscript.png)
 
+Please note that here we are loading the js from this repo but you should really fork it and not trust the file I host. You can also run a local webserver with `npm run build && npm run serve` and point the `dist\userscript-autominer-loader.js` to localhost (uncommenting line 3 and commenting line 4).
+
 3. Configure OrangeMonkey
 
 To make OrangeMonkey work in Chrome, do the following:
