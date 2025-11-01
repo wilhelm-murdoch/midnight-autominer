@@ -1,4 +1,4 @@
-const version = "1.0.0";
+const version = "1.0.1";
 console.log(`🛠️ Midnight Scavenger AutoMiner Script v${version} initialized.`);
 
 async function pause(milliseconds: number) {
@@ -95,6 +95,7 @@ function handleException(error: any) {
   audio.play().catch(() => {
     console.warn("🔊 Could not play warning sound.");
   });
+  window.location.reload();
 }
 
 // Catch unhandled promise rejections too
@@ -117,13 +118,13 @@ window.onerror = function (message, source, lineno, colno, error) {
       "🛠️ Document already loaded, starting auto-resume immediately."
     );
     await pause(1000);
-    await startAutoResume(5000);
+    await startAutoResume(15000);
     await pause(1000);
   } else {
     window.addEventListener("load", async function () {
       console.log("🛠️ Document loaded, starting auto-resume.");
       await pause(1000);
-      await startAutoResume(5000);
+      await startAutoResume(15000);
       await pause(1000);
     });
   }
