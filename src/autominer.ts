@@ -33,12 +33,12 @@ async function isFindingASolution() {
   const solutionElement = Array.from(document.querySelectorAll("*")).find(
     (element) => {
       const textNodes = Array.from(element.childNodes).filter(
-        (node) => node.nodeType === Node.TEXT_NODE
+        (node) => node.nodeType === Node.TEXT_NODE,
       );
       return textNodes.some((node) =>
-        node.textContent?.includes("Finding a solution...")
+        node.textContent?.includes("Finding a solution..."),
       );
-    }
+    },
   );
   console.log("Finding a solution:", !!solutionElement);
   return !!solutionElement;
@@ -58,12 +58,12 @@ async function checkMinerStatus() {
 async function handleMinerIntervention(isInitial = true) {
   if (isInitial) {
     console.log(
-      `⚠️ [Fresh Tab Reload ${new Date().toISOString()}] Miner is inactive and not actively crunching numbers. Attempting to start the session...`
+      `⚠️ [Fresh Tab Reload ${new Date().toISOString()}] Miner is inactive and not actively crunching numbers. Attempting to start the session...`,
     );
     startMiningSession();
   } else {
     console.log(
-      `⚠️ [Polling cycle ${new Date().toISOString()}] Miner is inactive and not actively crunching numbers. Attempting to reload the tab and start the session...`
+      `⚠️ [Polling cycle ${new Date().toISOString()}] Miner is inactive and not actively crunching numbers. Attempting to reload the tab and start the session...`,
     );
     window.location.reload();
   }
@@ -87,14 +87,6 @@ async function startAutoResume(intervalMs: number = 5000) {
 
 function handleException(error: any) {
   console.error("🚨🔴 Auto-resume failed to start:", error);
-
-  // Play warning sound
-  const audio = new Audio(
-    "data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmEcBjuN0fLIeC0FJHfJ8N6QQgsUXrTp66hUEwxCm+D5smkbCj2T1/LKeS0GI3fJ8N+OQQoUXrTp66lUEg5Cm+D4smkbCj2R1/LKeS0GJHfH8N6OQQsUXrTp66hVEgxCnOD4smkbCj2R1/LKeS0GJHfH8N+OQQwTXrTp66hVEwxBnOD4smkbCTyS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCjyT1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwTXrTp66hVEgxCnOD4smocCzuS1/LKeS0GJHfH8N2OQQwT"
-  );
-  audio.play().catch(() => {
-    console.warn("🔊 Could not play warning sound.");
-  });
   window.location.reload();
 }
 
@@ -115,7 +107,7 @@ window.onerror = function (message, source, lineno, colno, error) {
   // 2. If miner is inactive, attempt to resume mining by clicking the "Start session" button
   if (document.readyState === "complete") {
     console.log(
-      "🛠️ Document already loaded, starting auto-resume immediately."
+      "🛠️ Document already loaded, starting auto-resume immediately.",
     );
     await pause(1000);
     await startAutoResume(15000);
